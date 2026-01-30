@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER INCLUDE -->
+<div id="header"></div>
+
+<div class="admin-wrapper">
+
+  <!-- SIDEBAR INCLUDE -->
+  <div id="sidebar"></div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <h1>Dashboard</h1>
+    <p>This is the user dashboard.</p>
+  </div>
+
+</div>
+
+<!-- JS INCLUDE -->
+<script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("header").innerHTML = data);
+
+  fetch("sidebar.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("sidebar").innerHTML = data);
+</script>
+
+</body>
+</html>
