@@ -10,397 +10,730 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
+            <div class="nav-logo" onclick="showSection('home')">
                 <div class="logo-icon">📚</div>
                 <span class="logo-text">LEARNOVA</span>
             </div>
             <div class="nav-menu">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#integrations" class="nav-link">Integrations</a>
-                <a href="#customers" class="nav-link">Success Stories</a>
-                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#" class="nav-link" onclick="showSection('home'); return false;">Home</a>
+                <a href="#" class="nav-link" onclick="showSection('pricing'); return false;">Pricing</a>
+                <a href="#" class="nav-link" onclick="showSection('blog'); return false;">Blog</a>
+                <a href="#" class="nav-link" onclick="showSection('features'); return false;">Features</a>
+                <a href="#" class="nav-link" onclick="showSection('about'); return false;">About</a>
+                <a href="#" class="nav-link" onclick="showSection('services'); return false;">Services</a>
             </div>
             <div class="nav-buttons">
-                <a href="login.html" class="btn-ghost">Log in</a>
-                <a href="register.html" class="btn-primary">Get Started</a>
+                <a href="#" class="btn-ghost" onclick="showSection('login'); return false;">Log in</a>
+                <a href="#" class="btn-primary" onclick="showSection('register'); return false;">Get Started</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background"></div>
-        <div class="hero-content">
-            <div class="hero-badge">✨ Designed for educators, built for success</div>
-            <h1 class="hero-title">Transforming Education,<br><span class="gradient-text">One Course at a Time</span></h1>
-            <p class="hero-subtitle">LEARNOVA is a modern, flexible Learning Management System designed to empower educators and create engaging learning experiences that students love.</p>
-            <div class="hero-buttons">
-                <a href="register.html" class="btn-primary btn-lg">Start Free Trial →</a>
-                <button class="btn-outline btn-lg" id="openDemo">▶ Watch Demo</button>
-            </div>
-            <div class="hero-image">
-                <div class="placeholder-image">
-                    <div class="placeholder-icon">📊</div>
-                    <p>Interactive Learning Dashboard</p>
+    <!-- ==================== HOME SECTION ==================== -->
+    <div id="home-section" class="section active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background"></div>
+            <div class="hero-content">
+                <div class="hero-badge">✨ Designed for educators, built for success</div>
+                <h1 class="hero-title">Transforming Education,<br><span class="gradient-text">One Course at a Time</span></h1>
+                <p class="hero-subtitle">LEARNOVA is a modern, flexible Learning Management System designed to empower educators and create engaging learning experiences that students love.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary btn-lg" onclick="showSection('register'); return false;">Start Free Trial →</a>
+                    <button class="btn-outline btn-lg" id="openDemo">▶ Watch Demo</button>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Powerful Features Built for Learning</h2>
-                <p>Everything you need to create, deliver, and manage engaging online learning experiences.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>Collaborative Learning</h3>
-                    <p>Foster engagement with discussion forums, group assignments, and real-time collaboration tools that bring learners together.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Advanced Analytics</h3>
-                    <p>Gain deep insights into learner progress, performance metrics, and engagement patterns to optimize your courses.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Lightning Fast</h3>
-                    <p>Built for speed and scalability. Handle thousands of concurrent users without compromising performance or user experience.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Security & Privacy</h3>
-                    <p>Enterprise-grade security, GDPR compliant, and built-in privacy controls to protect your institution and learners.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Global Accessibility</h3>
-                    <p>WCAG 2.2 AA compliant with multi-language support, ensuring learning is accessible to everyone, everywhere.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h3>Communication Tools</h3>
-                    <p>Integrated messaging, notifications, and announcements keep everyone connected and informed throughout their learning journey.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Customization Section -->
-    <section class="customization">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Customize for Your Institution</h2>
-            <div class="customization-grid">
-                <div class="customization-card">
-                    <div class="custom-icon">🏫</div>
-                    <h3>K-12 Schools</h3>
-                    <p>Create safe, engaging online learning spaces with tools specifically designed for younger learners and parental oversight.</p>
-                </div>
-                <div class="customization-card">
-                    <div class="custom-icon">🎓</div>
-                    <h3>Higher Education</h3>
-                    <p>Empower universities and colleges with a scalable platform for hundreds of courses and thousands of students.</p>
-                </div>
-                <div class="customization-card">
-                    <div class="custom-icon">🔧</div>
-                    <h3>Vocational Training</h3>
-                    <p>Deliver practical, skill-based courses that connect learners with real-world career opportunities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI & Innovation Section -->
-    <section class="ai-section">
-        <div class="container" style="max-width: 800px; text-align: center;">
-            <div class="ai-icon">⚡</div>
-            <h2>AI, Your Way</h2>
-            <p>LEARNOVA gives you control over how AI enhances learning. Our thoughtful AI integration is guided by principles of ethics, transparency, and human-centered design. AI features are designed to support educators, protect learner data, and keep humans at the heart of education.</p>
-            <button class="btn-primary btn-lg">Learn About Our AI Approach</button>
-        </div>
-    </section>
-
-    <!-- Integrations Section -->
-    <section id="integrations" class="integrations">
-        <div class="container">
-            <div class="section-header">
-                <h2>Certified Integrations</h2>
-                <p>Connect LEARNOVA with your existing tools and systems to create a seamless learning ecosystem.</p>
-            </div>
-            <div class="integrations-grid">
-                <div class="integration-card">
-                    <div class="integration-icon">📹</div>
-                    <p>Video Conferencing</p>
-                </div>
-                <div class="integration-card">
-                    <div class="integration-icon">🔐</div>
-                    <p>Single Sign-On</p>
-                </div>
-                <div class="integration-card">
-                    <div class="integration-icon">📚</div>
-                    <p>Content Libraries</p>
-                </div>
-                <div class="integration-card">
-                    <div class="integration-icon">✓</div>
-                    <p>Academic Integrity</p>
-                </div>
-                <div class="integration-card">
-                    <div class="integration-icon">📊</div>
-                    <p>Analytics Tools</p>
-                </div>
-                <div class="integration-card">
-                    <div class="integration-icon">📧</div>
-                    <p>Email Integration</p>
-                </div>
-                <div class="integration-card">
-                    <div class="integration-icon">📝</div>
-                    <p>Assessment Tools</p>
-                </div>
-                <div class="integration-card">
-                    <div class="integration-icon">☁️</div>
-                    <p>Cloud Storage</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Success Stories Section -->
-    <section id="customers" class="success-stories">
-        <div class="container">
-            <div class="section-header">
-                <h2>Success Stories</h2>
-                <p>See how institutions worldwide are transforming education with LEARNOVA.</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="quote">"LEARNOVA's flexibility and customizability allowed us to create a unique learning environment that matches our institution's vision and values."</p>
-                    <div class="testimonial-author">
-                        <p class="author-name">Dr. Sarah Chen</p>
-                        <p class="author-role">Director of Online Learning</p>
-                        <p class="author-org">Global Academy Network</p>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="quote">"With LEARNOVA, we've been able to scale our vocational training programs and reach thousands of students who previously had no access to quality education."</p>
-                    <div class="testimonial-author">
-                        <p class="author-name">Marcus Johnson</p>
-                        <p class="author-role">CEO</p>
-                        <p class="author-org">Skills For Tomorrow</p>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="quote">"Our teachers love LEARNOVA's intuitive interface, and our students are more engaged than ever. The platform truly understands education."</p>
-                    <div class="testimonial-author">
-                        <p class="author-name">Jennifer Rodriguez</p>
-                        <p class="author-role">Principal</p>
-                        <p class="author-org">Bright Future Schools</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mobile App Section -->
-    <section class="mobile-section">
-        <div class="container">
-            <div class="mobile-grid">
-                <div class="mobile-content">
-                    <h2>Learning Goes Mobile</h2>
-                    <p>The LEARNOVA mobile app brings your courses to life on any device. Learn on the go, stay connected with your community, and access content online or offline from anywhere in the world.</p>
-                    <button class="btn-primary btn-lg">Download the App →</button>
-                </div>
-                <div class="mobile-image">
+                <div class="hero-image">
                     <div class="placeholder-image">
-                        <div class="placeholder-icon">📱</div>
-                        <p>Mobile Experience Preview</p>
+                        <div class="placeholder-icon">📊</div>
+                        <p>Interactive Learning Dashboard</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Awards Section -->
-    <section class="awards">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Recognized Leaders in EdTech</h2>
-            <p style="text-align: center; margin-bottom: 3rem; color: #666; font-size: 1.1rem;">LEARNOVA's commitment to excellence has earned recognition from leading education organizations and industry experts worldwide.</p>
-            <div class="awards-grid">
-                <div class="award-card">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏆</div>
-                    <p>Excellence Award</p>
+        <!-- Key Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Powerful Features Built for Learning</h2>
+                    <p>Everything you need to create, deliver, and manage engaging online learning experiences.</p>
                 </div>
-                <div class="award-card">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">💡</div>
-                    <p>Innovation Leader</p>
-                </div>
-                <div class="award-card">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎨</div>
-                    <p>Best UX Design</p>
-                </div>
-                <div class="award-card">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🥇</div>
-                    <p>Top 10 LMS</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>Collaborative Learning</h3>
+                        <p>Foster engagement with discussion forums, group assignments, and real-time collaboration tools that bring learners together.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Advanced Analytics</h3>
+                        <p>Gain deep insights into learner progress, performance metrics, and engagement patterns to optimize your courses.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Lightning Fast</h3>
+                        <p>Built for speed and scalability. Handle thousands of concurrent users without compromising performance or user experience.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Security & Privacy</h3>
+                        <p>Enterprise-grade security, GDPR compliant, and built-in privacy controls to protect your institution and learners.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Global Accessibility</h3>
+                        <p>WCAG 2.2 AA compliant with multi-language support, ensuring learning is accessible to everyone, everywhere.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3>Communication Tools</h3>
+                        <p>Integrated messaging, notifications, and announcements keep everyone connected and informed throughout their learning journey.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container" style="max-width: 900px; text-align: center;">
-            <h2>Ready to Transform Your Institution?</h2>
-            <p>Join thousands of educators using LEARNOVA to create exceptional learning experiences. Start your free trial today—no credit card required.</p>
-            <div class="cta-buttons">
-                <a href="register.html" class="btn-light btn-lg">Start Free Trial →</a>
-                <button class="btn-outline-light btn-lg">Schedule a Demo</button>
+        <!-- Customization Section -->
+        <section class="customization">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Customize for Your Institution</h2>
+                <div class="customization-grid">
+                    <div class="customization-card">
+                        <div class="custom-icon">🏫</div>
+                        <h3>K-12 Schools</h3>
+                        <p>Create safe, engaging online learning spaces with tools specifically designed for younger learners and parental oversight.</p>
+                    </div>
+                    <div class="customization-card">
+                        <div class="custom-icon">🎓</div>
+                        <h3>Higher Education</h3>
+                        <p>Empower universities and colleges with a scalable platform for hundreds of courses and thousands of students.</p>
+                    </div>
+                    <div class="customization-card">
+                        <div class="custom-icon">🔧</div>
+                        <h3>Vocational Training</h3>
+                        <p>Deliver practical, skill-based courses that connect learners with real-world career opportunities.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-        <div class="container" style="max-width: 900px;">
-            <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Frequently Asked Questions</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span class="faq-icon">✓</span>
-                        <h3>How do I get started with LEARNOVA?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer" style="display: none;">
-                        <p>Getting started is easy! Sign up for a free trial on our website, complete the quick setup wizard, and you'll be ready to create your first course in minutes.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span class="faq-icon">✓</span>
-                        <h3>What support and services does LEARNOVA offer?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer" style="display: none;">
-                        <p>We provide comprehensive support including documentation, community forums, email support, and professional services. Enterprise customers receive dedicated account managers and 24/7 support.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span class="faq-icon">✓</span>
-                        <h3>Is LEARNOVA secure and compliant?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer" style="display: none;">
-                        <p>Yes, LEARNOVA is built with enterprise-grade security, including GDPR compliance, WCAG accessibility standards, and regular security audits. We take data protection seriously.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span class="faq-icon">✓</span>
-                        <h3>Can LEARNOVA scale with my institution?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer" style="display: none;">
-                        <p>Absolutely. LEARNOVA is built for growth and can handle anything from small training programs to large university systems with thousands of concurrent users.</p>
-                    </div>
-                </div>
+        <!-- AI & Innovation Section -->
+        <section class="ai-section">
+            <div class="container" style="max-width: 800px; text-align: center;">
+                <div class="ai-icon">⚡</div>
+                <h2>AI, Your Way</h2>
+                <p>LEARNOVA gives you control over how AI enhances learning. Our thoughtful AI integration is guided by principles of ethics, transparency, and human-centered design. AI features are designed to support educators, protect learner data, and keep humans at the heart of education.</p>
+                <button class="btn-primary btn-lg">Learn About Our AI Approach</button>
             </div>
-            <div class="faq-footer">
-                <p>Can't find what you're looking for?</p>
-                <a href="#" class="faq-link">Visit our Knowledge Base →</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <a href="#">Features</a>
-                    <a href="#">Pricing</a>
-                    <a href="#">Security</a>
-                    <a href="#">Roadmap</a>
+        <!-- Integrations Section -->
+        <section class="integrations">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Certified Integrations</h2>
+                    <p>Connect LEARNOVA with your existing tools and systems to create a seamless learning ecosystem.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <a href="#">About Us</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Contact</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <a href="#">Documentation</a>
-                    <a href="#">Support</a>
-                    <a href="#">Community</a>
-                    <a href="#">Status</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Cookie Policy</a>
-                    <a href="#">Compliance</a>
+                <div class="integrations-grid">
+                    <div class="integration-card">
+                        <div class="integration-icon">📹</div>
+                        <p>Video Conferencing</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">🔐</div>
+                        <p>Single Sign-On</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">📚</div>
+                        <p>Content Libraries</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">✓</div>
+                        <p>Academic Integrity</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">📊</div>
+                        <p>Analytics Tools</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">📧</div>
+                        <p>Email Integration</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">📝</div>
+                        <p>Assessment Tools</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon">☁️</div>
+                        <p>Cloud Storage</p>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 LEARNOVA. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#">Twitter</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Facebook</a>
+        </section>
+
+        <!-- Success Stories Section -->
+        <section class="success-stories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Success Stories</h2>
+                    <p>See how institutions worldwide are transforming education with LEARNOVA.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="quote">"LEARNOVA's flexibility and customizability allowed us to create a unique learning environment that matches our institution's vision and values."</p>
+                        <div class="testimonial-author">
+                            <p class="author-name">Dr. Sarah Chen</p>
+                            <p class="author-role">Director of Online Learning</p>
+                            <p class="author-org">Global Academy Network</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="quote">"With LEARNOVA, we've been able to scale our vocational training programs and reach thousands of students who previously had no access to quality education."</p>
+                        <div class="testimonial-author">
+                            <p class="author-name">Marcus Johnson</p>
+                            <p class="author-role">CEO</p>
+                            <p class="author-org">Skills For Tomorrow</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="quote">"Our teachers love LEARNOVA's intuitive interface, and our students are more engaged than ever. The platform truly understands education."</p>
+                        <div class="testimonial-author">
+                            <p class="author-name">Jennifer Rodriguez</p>
+                            <p class="author-role">Principal</p>
+                            <p class="author-org">Bright Future Schools</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
+
+        <!-- Mobile App Section -->
+        <section class="mobile-section">
+            <div class="container">
+                <div class="mobile-grid">
+                    <div class="mobile-content">
+                        <h2>Learning Goes Mobile</h2>
+                        <p>The LEARNOVA mobile app brings your courses to life on any device. Learn on the go, stay connected with your community, and access content online or offline from anywhere in the world.</p>
+                        <button class="btn-primary btn-lg">Download the App →</button>
+                    </div>
+                    <div class="mobile-image">
+                        <div class="placeholder-image">
+                            <div class="placeholder-icon">📱</div>
+                            <p>Mobile Experience Preview</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards Section -->
+        <section class="awards">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Recognized Leaders in EdTech</h2>
+                <p style="text-align: center; margin-bottom: 3rem; color: #666; font-size: 1.1rem;">LEARNOVA's commitment to excellence has earned recognition from leading education organizations and industry experts worldwide.</p>
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏆</div>
+                        <p>Excellence Award</p>
+                    </div>
+                    <div class="award-card">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">💡</div>
+                        <p>Innovation Leader</p>
+                    </div>
+                    <div class="award-card">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎨</div>
+                        <p>Best UX Design</p>
+                    </div>
+                    <div class="award-card">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🥇</div>
+                        <p>Top 10 LMS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container" style="max-width: 900px; text-align: center;">
+                <h2>Ready to Transform Your Institution?</h2>
+                <p>Join thousands of educators using LEARNOVA to create exceptional learning experiences. Start your free trial today—no credit card required.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-light btn-lg" onclick="showSection('register'); return false;">Start Free Trial →</a>
+                    <button class="btn-outline-light btn-lg">Schedule a Demo</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container" style="max-width: 900px;">
+                <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-icon">✓</span>
+                            <h3>How do I get started with LEARNOVA?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>Getting started is easy! Sign up for a free trial on our website, complete the quick setup wizard, and you'll be ready to create your first course in minutes.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-icon">✓</span>
+                            <h3>What support and services does LEARNOVA offer?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>We provide comprehensive support including documentation, community forums, email support, and professional services. Enterprise customers receive dedicated account managers and 24/7 support.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-icon">✓</span>
+                            <h3>Is LEARNOVA secure and compliant?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>Yes, LEARNOVA is built with enterprise-grade security, including GDPR compliance, WCAG accessibility standards, and regular security audits. We take data protection seriously.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-icon">✓</span>
+                            <h3>Can LEARNOVA scale with my institution?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>Absolutely. LEARNOVA is built for growth and can handle anything from small training programs to large university systems with thousands of concurrent users.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-footer">
+                    <p>Can't find what you're looking for?</p>
+                    <a href="#" class="faq-link">Visit our Knowledge Base →</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==================== PRICING SECTION ==================== -->
+    <div id="pricing-section" class="section">
+        <section class="pricing-page">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Simple, Transparent Pricing</h2>
+                    <p>Choose the perfect plan for your institution. All plans include a 14-day free trial.</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Starter</h3>
+                        <div class="price">$99<span>/month</span></div>
+                        <p class="description">Perfect for small institutions and training programs</p>
+                        <ul class="features-list">
+                            <li>✓ Up to 500 students</li>
+                            <li>✓ 5 courses</li>
+                            <li>✓ Basic analytics</li>
+                            <li>✓ Email support</li>
+                            <li>✗ API access</li>
+                            <li>✗ Custom branding</li>
+                        </ul>
+                        <button class="btn-primary btn-lg">Get Started</button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="badge">Most Popular</div>
+                        <h3>Professional</h3>
+                        <div class="price">$299<span>/month</span></div>
+                        <p class="description">Ideal for growing educational institutions</p>
+                        <ul class="features-list">
+                            <li>✓ Up to 5,000 students</li>
+                            <li>✓ Unlimited courses</li>
+                            <li>✓ Advanced analytics</li>
+                            <li>✓ Priority support</li>
+                            <li>✓ API access</li>
+                            <li>✓ Custom branding</li>
+                        </ul>
+                        <button class="btn-primary btn-lg">Get Started</button>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Enterprise</h3>
+                        <div class="price">Custom<span>/month</span></div>
+                        <p class="description">For large institutions with advanced needs</p>
+                        <ul class="features-list">
+                            <li>✓ Unlimited students</li>
+                            <li>✓ Unlimited courses</li>
+                            <li>✓ Custom analytics</li>
+                            <li>✓ 24/7 support</li>
+                            <li>✓ Full API access</li>
+                            <li>✓ White-label solution</li>
+                        </ul>
+                        <button class="btn-primary btn-lg">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==================== BLOG SECTION ==================== -->
+    <div id="blog-section" class="section">
+        <section class="blog-page">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Latest from Our Blog</h2>
+                    <p>Industry insights, tips, and stories from the LEARNOVA community.</p>
+                </div>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-image">📚</div>
+                        <div class="blog-content">
+                            <p class="blog-meta">January 15, 2024 • 5 min read</p>
+                            <h3>10 Ways to Engage Your Online Learners</h3>
+                            <p>Discover proven strategies to increase student engagement and participation in your online courses.</p>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-image">🚀</div>
+                        <div class="blog-content">
+                            <p class="blog-meta">January 10, 2024 • 7 min read</p>
+                            <h3>The Future of EdTech: AI and Personalization</h3>
+                            <p>Explore how artificial intelligence is revolutionizing personalized learning experiences for students worldwide.</p>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-image">🎯</div>
+                        <div class="blog-content">
+                            <p class="blog-meta">January 5, 2024 • 6 min read</p>
+                            <h3>Best Practices for Course Design</h3>
+                            <p>Learn how to structure your courses for maximum impact and learner success with these expert tips.</p>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-image">📊</div>
+                        <div class="blog-content">
+                            <p class="blog-meta">December 28, 2023 • 8 min read</p>
+                            <h3>Data-Driven Learning: Using Analytics to Improve Outcomes</h3>
+                            <p>Understand how to leverage learning analytics to identify trends and improve your educational programs.</p>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-image">💡</div>
+                        <div class="blog-content">
+                            <p class="blog-meta">December 20, 2023 • 5 min read</p>
+                            <h3>Mobile Learning: Teaching on the Go</h3>
+                            <p>Optimize your content for mobile devices and create seamless learning experiences for students anywhere.</p>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-image">🌟</div>
+                        <div class="blog-content">
+                            <p class="blog-meta">December 15, 2023 • 6 min read</p>
+                            <h3>Success Story: How One School Transformed Learning</h3>
+                            <p>Read how Bright Future Schools doubled completion rates and improved student satisfaction with LEARNOVA.</p>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==================== FEATURES DETAILED SECTION ==================== -->
+    <div id="features-section" class="section">
+        <section class="features-page">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Complete Feature Set</h2>
+                    <p>Everything an educator needs to deliver exceptional online learning experiences.</p>
+                </div>
+                <div class="features-detailed-grid">
+                    <div class="feature-detail-card">
+                        <div class="feature-detail-icon">🎨</div>
+                        <h3>Drag & Drop Course Builder</h3>
+                        <p>Create beautiful, interactive courses without coding. Our intuitive interface makes it easy for anyone to build engaging content.</p>
+                    </div>
+                    <div class="feature-detail-card">
+                        <div class="feature-detail-icon">📊</div>
+                        <h3>Real-Time Analytics</h3>
+                        <p>Monitor student progress with detailed dashboards. Track engagement, completion rates, and learning outcomes in real-time.</p>
+                    </div>
+                    <div class="feature-detail-card">
+                        <div class="feature-detail-icon">📹</div>
+                        <h3>Video Integration</h3>
+                        <p>Seamlessly embed videos from YouTube, Vimeo, or upload your own. Support for interactive video features and transcripts.</p>
+                    </div>
+                    <div class="feature-detail-card">
+                        <div class="feature-detail-icon">🧪</div>
+                        <h3>Assessment Tools</h3>
+                        <p>Create quizzes, assignments, and exams with automatic grading. Support for various question types and flexible grading scales.</p>
+                    </div>
+                    <div class="feature-detail-card">
+                        <div class="feature-detail-icon">💬</div>
+                        <h3>Discussion Forums</h3>
+                        <p>Foster peer-to-peer learning with moderated discussion forums. Encourage collaboration and community building among learners.</p>
+                    </div>
+                    <div class="feature-detail-card">
+                        <div class="feature-detail-icon">🔐</div>
+                        <h3>Advanced Permissions</h3>
+                        <p>Fine-grained access control for different user roles. Manage content visibility, grading rights, and administrative privileges.</p>
+                    </div>
+                    <div class="feature-detail-card">
+                        <div class="feature-detail-icon">📱</div>
+                        <h3>Mobile-First Design</h3>
+                        <p>Fully responsive interface that works perfectly on all devices. Native mobile apps for iOS and Android for on-the-go learning.</p>
+                    </div>
+                    <div class="feature-detail-card">
+                        <div class="feature-detail-icon">🔄</div>
+                        <h3>Content Library</h3>
+                        <p>Access to thousands of pre-built learning modules. Customize and reuse content across multiple courses to save time.</p>
+                    </div>
+                    <div class="feature-detail-card">
+                        <div class="feature-detail-icon">🌐</div>
+                        <h3>Multi-Language Support</h3>
+                        <p>Offer courses in multiple languages. Automatic translation tools and language-specific content management.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <div id="about-section" class="section">
+        <section class="about-page">
+            <div class="container">
+                <!-- About Hero -->
+                <div class="about-hero">
+                    <div class="about-hero-content">
+                        <h3>About LEARNOVA</h3>
+                        <p>Founded in 2020, LEARNOVA was created with a simple but powerful mission: to transform education by providing educators with the tools they need to create engaging, effective learning experiences.</p>
+                        <p>We believe that education should be accessible, flexible, and engaging for everyone. Our platform is designed to empower educators and inspire learners, no matter where they are in the world.</p>
+                    </div>
+                    <div class="placeholder-image">
+                        <div class="placeholder-icon">🏢</div>
+                        <p>Our Office</p>
+                    </div>
+                </div>
+
+                <!-- Mission Section -->
+                <div class="mission-section">
+                    <h3>Our Mission</h3>
+                    <p>To empower educators with innovative technology that creates engaging learning experiences and makes quality education accessible to everyone, everywhere.</p>
+                </div>
+
+                <!-- Values Section -->
+                <div class="values-section">
+                    <h3>Our Core Values</h3>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <h4>Innovation</h4>
+                            <p>We continuously push boundaries to deliver cutting-edge solutions that meet the evolving needs of education.</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>Accessibility</h4>
+                            <p>Education should be available to everyone. We're committed to making our platform inclusive and accessible.</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>Community</h4>
+                            <p>We believe in the power of community. Our platform brings educators and learners together globally.</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>Excellence</h4>
+                            <p>We're dedicated to delivering the highest quality products and services for our customers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Section -->
+                <div class="team-section">
+                    <h3>Our Team</h3>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-avatar">👨‍💼</div>
+                            <h4>John Smith</h4>
+                            <p>CEO & Co-Founder</p>
+                            <span class="member-bio">Passionate about education technology with 15+ years of experience in the EdTech industry.</span>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-avatar">👩‍💼</div>
+                            <h4>Lisa Anderson</h4>
+                            <p>CTO & Co-Founder</p>
+                            <span class="member-bio">Software engineer and visionary leader with expertise in cloud platforms and scalable systems.</span>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-avatar">👨‍🎓</div>
+                            <h4>Michael Chen</h4>
+                            <p>Head of Product</p>
+                            <span class="member-bio">Education specialist focused on creating user-centric products that educators love.</span>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-avatar">👩‍💻</div>
+                            <h4>Sarah Williams</h4>
+                            <p>Lead Designer</p>
+                            <span class="member-bio">Award-winning designer passionate about creating beautiful and intuitive user experiences.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="stats-section">
+                    <h3>Our Impact</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">500K+</div>
+                            <p>Active Learners</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">10K+</div>
+                            <p>Educators</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">5K+</div>
+                            <p>Institutions</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">150+</div>
+                            <p>Countries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <div id="services-section" class="section">
+        <section class="services-page">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Professional Services</h2>
+                    <p>Comprehensive support to ensure your institution gets the most from LEARNOVA.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🎯</div>
+                        <h3>Consultation & Strategy</h3>
+                        <p>Our experts will work with you to develop a customized implementation strategy that aligns with your institution's goals and needs.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🚀</div>
+                        <h3>Implementation</h3>
+                        <p>From setup to deployment, our team handles the entire implementation process to ensure a smooth transition to LEARNOVA.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📚</div>
+                        <h3>Training & Onboarding</h3>
+                        <p>Comprehensive training programs for educators and administrators to ensure everyone can effectively use the platform.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🎨</div>
+                        <h3>Course Design</h3>
+                        <p>Our instructional designers can help you create engaging, effective courses that maximize student outcomes.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📊</div>
+                        <h3>Data & Analytics</h3>
+                        <p>Get insights from your data with our analytics experts. Custom dashboards and reports tailored to your needs.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Technical Support</h3>
+                        <p>24/7 technical support with dedicated account managers to ensure your platform runs smoothly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==================== LOGIN SECTION ==================== -->
+    <div id="login-section" class="section">
+        <section class="auth-page" style="padding: 4rem 2rem; background: var(--background);">
+            <div class="container" style="max-width: 500px;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h2>Log in to LEARNOVA</h2>
+                    <p style="color: var(--text-secondary); margin-top: 0.5rem;">Welcome back! Please log in to your account.</p>
+                </div>
+                <form style="background: var(--surface); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border);">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Email Address</label>
+                        <input type="email" placeholder="you@example.com" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 0.5rem; font-size: 1rem;">
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Password</label>
+                        <input type="password" placeholder="••••••••" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 0.5rem; font-size: 1rem;">
+                    </div>
+                    <button type="submit" class="btn-primary btn-lg" style="width: 100%; margin-bottom: 1rem;">Log in</button>
+                    <p style="text-align: center; color: var(--text-secondary);">Don't have an account? <a href="#" onclick="showSection('register'); return false;" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Sign up here</a></p>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==================== REGISTER SECTION ==================== -->
+    <div id="register-section" class="section">
+        <section class="auth-page" style="padding: 4rem 2rem; background: var(--background);">
+            <div class="container" style="max-width: 600px;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h2>Create Your Account</h2>
+                    <p style="color: var(--text-secondary); margin-top: 0.5rem;">Join thousands of educators transforming learning with LEARNOVA.</p>
+                </div>
+                <form class="register-form" style="background: var(--surface); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border);">
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Username</label>
+                        <input type="text" name="username" placeholder="johndoe" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 0.5rem; font-size: 1rem;">
+                        <span class="field-error" style="color: #ef4444; font-size: 0.85rem; display: none;"></span>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Email Address</label>
+                        <input type="email" name="email" placeholder="you@example.com" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 0.5rem; font-size: 1rem;">
+                        <span class="field-error" style="color: #ef4444; font-size: 0.85rem; display: none;"></span>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Password</label>
+                        <input type="password" name="password" placeholder="••••••••" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 0.5rem; font-size: 1rem;">
+                        <span class="field-error" style="color: #ef4444; font-size: 0.85rem; display: none;"></span>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Mobile Number</label>
+                        <input type="tel" name="mobile" placeholder="+1 (555) 123-4567" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 0.5rem; font-size: 1rem;">
+                        <span class="field-error" style="color: #ef4444; font-size: 0.85rem; display: none;"></span>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary);">Select Your Role</label>
+                        <select name="role" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 0.5rem; font-size: 1rem; background: white; cursor: pointer;">
+                            <option value="" disabled selected>Choose your role...</option>
+                            <option value="student">Student</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="admin">Admin</option>
+                            <option value="parent">Parent</option>
+                        </select>
+                        <span class="field-error" style="color: #ef4444; font-size: 0.85rem; display: none;"></span>
+                    </div>
+                    <button type="submit" class="btn-primary btn-lg" style="width: 100%; margin-bottom: 1rem;">Create Account</button>
+                    <p style="text-align: center; color: var(--text-secondary);">Already have an account? <a href="#" onclick="showSection('login'); return false;" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Log in here</a></p>
+                </form>
+            </div>
+        </section>
+    </div>
 
     <!-- Demo Modal -->
-<div class="modal" id="demoModal">
-    <div class="modal-content">
-        <button class="modal-close" id="closeModal">✕</button>
-        <div class="video-wrapper">
-            <iframe 
-                id="demoVideo"
-                src=""
-                title="LEARNOVA Demo"
-                frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen>
-            </iframe>
+    <div id="demoModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); z-index: 2000; justify-content: center; align-items: center;">
+        <div style="background: white; border-radius: 1rem; padding: 2rem; max-width: 800px; width: 90%; position: relative;">
+            <button id="closeModal" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer;">✕</button>
+            <h2 style="margin-bottom: 1.5rem;">Watch Demo</h2>
+            <iframe id="demoVideo" width="100%" height="400" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
-</div>
 
-<script>
-const openBtn = document.getElementById("openDemo");
-const modal = document.getElementById("demoModal");
-const closeBtn = document.getElementById("closeModal");
-const video = document.getElementById("demoVideo");
+    <!-- Scripts -->
+   <script src="../landing.js"></script>
 
-openBtn.addEventListener("click", () => {
-    modal.classList.add("active");
-    video.src = "https://www.youtube.com/embed/IxRVa1DbSAg?autoplay=1";
-});
-
-closeBtn.addEventListener("click", () => {
-    modal.classList.remove("active");
-    video.src = "";
-});
-
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.classList.remove("active");
-        video.src = "";
-    }
-});
-</script>
-
-    <script src="../landing.js" defer></script>
 </body>
 </html>

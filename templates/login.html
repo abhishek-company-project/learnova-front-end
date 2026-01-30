@@ -126,7 +126,7 @@
             <a href="#" class="forgot-link">Forgot Password?</a>
           </div>
           
-          <button type="submit" class="btn-primary" id="loginBtn">
+          <button type="submit" class="btn-primary" id="loginBtn" onclick="loginSubmit(event)">
             <span class="btn-text">Sign In</span>
             <span class="btn-loader" style="display: none;">
               <svg class="spinner" width="20" height="20" viewBox="0 0 24 24">
@@ -165,7 +165,33 @@
       </div>
     </div>
   </div>
-  
-  <script src="script.js"></script>
+<script>
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", loginSubmit);
+
+function loginSubmit(e) {
+  e.preventDefault();
+
+  const email = document.querySelector("#loginEmail").value;
+  const password = document.querySelector("#loginPassword").value;
+
+  fetch("http://127.0.0.1:8000/users/login-user/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ email, password })
+  })
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+}
+</script>
+
+<script src="script.js" defer></script>
+
+
+
 </body>
 </html>
